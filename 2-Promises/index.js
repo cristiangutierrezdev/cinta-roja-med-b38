@@ -1,7 +1,7 @@
 const request = require("request");
 
 function getPeople() {
-  const url = "https://swapi.co/api/people/";
+  const url = "";
 
   const people = new Promise(function(resolve, reject) {
     request.get(url, function(err, response, body) {
@@ -17,7 +17,7 @@ function getPeople() {
 }
 
 function getPerson(id) {
-  const url = `https://swapi.co/api/people/${id}`;
+  const url = `https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/${id}/`;
 
   const person = new Promise(function(resolve, reject) {
     request.get(url, function(err, response, body) {
@@ -32,13 +32,21 @@ function getPerson(id) {
   return person;
 }
 
-getPeople()
-  .then(data => {
-    console.log(data.results[2]);
-    return getPerson(20);
-  })
-  .then(person => {
-    console.log(person);
+// getPeople()
+//   .then(data => {
+//     console.log(data.results[2]);
+//     return getPerson(20);
+//   })
+//   .then(person => {
+//     console.log(person);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+getPerson(2604)
+  .then(result => {
+    console.log(result);
   })
   .catch(err => {
     console.log(err);
