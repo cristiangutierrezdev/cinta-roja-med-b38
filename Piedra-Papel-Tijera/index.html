@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Piedra, papel o tijera</title>
+  </head>
+  <body>
+    <header class="titulo">
+      <h1>Piedra, papel o tijera</h1>
+    </header>
+    <main>
+      <!-- SECCION DE INICIO -->
+
+      <section class="comenzar">
+        <section class="comenzar__jugadores">
+          <div class="jugadores__jugador-1">
+            <h2>
+              Jugador 1 escribe tu nombre
+            </h2>
+            <input id="jugador-1" class="jugadores__input" type="text" />
+          </div>
+          <div class="jugadores__jugador-2">
+            <h2>
+              Jugador 2 escribe tu nombre
+            </h2>
+            <input id="jugador-2" class="jugadores__input" type="text" />
+          </div>
+        </section>
+        <section class="comenzar__btn">
+          <button class="btn btn--hover" type="button">Jugar</button>
+        </section>
+      </section>
+
+      <!-- SECCION DE ESCOGER ARMA -->
+
+      <section class="escoger">
+        <section class="escoger__titulo">
+          <h3 id="nombre-jugador">Jugador 1 escoge tu arma</h3>
+        </section>
+        <section class="escoger__arma">
+          <div class="arma__piedra arma--clicked">
+            <img src="./images/rock.svg" alt="Piedra" />
+          </div>
+          <div class="arma__papel arma--clicked">
+            <img src="./images/paper.svg" alt="Papel" />
+          </div>
+          <div class="arma__tijeras arma--clicked">
+            <img src="./images/scissor.svg" alt="Tijeras" />
+          </div>
+        </section>
+      </section>
+
+      <!-- SECCION DE BATALLA -->
+
+      <section class="batalla">
+        <div class="batalla__jugador-1">
+          <h2 id="nombre1" class="batalla__jugadores">Jugador 1</h2>
+          <div class="batalla__img">
+            <img id="weapon1" src="" alt="" />
+          </div>
+        </div>
+        <h3 id="vs">VS</h3>
+        <div class="batalla__jugador-2">
+          <h2 id="nombre2" class="batalla__jugadores">Jugador 2</h2>
+          <div class="batalla__img">
+            <img id="weapon2" src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCION DE GANADOR -->
+      <section class="ganador">
+        <h2 id="ganador__texto">
+          El ganador es: <span class="ganador__jugador">XXXX</span>
+        </h2>
+      </section>
+    </main>
+    <footer class="footer">Todos los derechos publicos :D</footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
